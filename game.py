@@ -1,9 +1,9 @@
-import player
+import simple_random_guesser as player
 
 
 def play_game():
-    p1 = player.Player()
-    p2 = player.Player()
+    p1 = player.SimpleRandomGuesser()
+    p2 = player.SimpleRandomGuesser()
     game_over = False
     turn_count = 0
     while not game_over:
