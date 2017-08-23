@@ -1,10 +1,2 @@
 *.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/*.pyc
-.idea/
+.idea
