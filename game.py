@@ -22,13 +22,11 @@ def play_game():
                 print("Player 1 wins in %d turns" % p1_turns)
         else:
             guess = p2.make_guess()
-            print(p1.my_grid.grid)
             print("Player 2 guesses", guess)
             result = p1.check_opponent_guess(guess)
             print(result)
             p2.process_result(result)
             p2_turns += 1
-            print(p2.opponent_grid.grid)
             if len(p1.ships) == 0:
                 game_over = True
                 print("Player 2 wins in %d turns" % p2_turns)
