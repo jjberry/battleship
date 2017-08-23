@@ -16,13 +16,13 @@ class Player:
         if len(self.knowledge_state) == 0:
             self.my_guess = self.random_guess()
             return self.my_guess
-        else:
-            done = False
-            while not done:
-                dir = np.random.choice(self.knowledge_state['Dirs'])
-                hit = self.knowledge_state['Hit']
-                col = util.col_ind()[hit[0]]
-                row = util.row_ind()[hit[1]]
+        #else:
+        #    done = False
+        #    while not done:
+        #        dir = np.random.choice(self.knowledge_state['Dirs'])
+        #        hit = self.knowledge_state['Hit']
+        #        col = util.col_ind()[hit[0]]
+        #        row = util.row_ind()[hit[1]]
 
 
 
@@ -41,9 +41,9 @@ class Player:
             self.opponent_grid.set_val(self.my_guess[0], self.my_guess[1], 1)
             if "Sunk" in result:
                 self.knowledge_state = {}
-            elif len(self.knowledge_state) == 0:
-                self.knowledge_state['Hit'] = self.my_guess
-                self.knowledge_state['Dirs'] = range(4)
+            #elif len(self.knowledge_state) == 0:
+            #    self.knowledge_state['Hit'] = self.my_guess
+            #    self.knowledge_state['Dirs'] = range(4)
 
     def check_opponent_guess(self, guess):
         hit = []
